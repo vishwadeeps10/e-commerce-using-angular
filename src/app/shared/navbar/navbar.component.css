@@ -1,0 +1,46 @@
+.navbar-custom {
+    background-image: linear-gradient(to right, #f7f8f9, #e0e4e8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ .navbar-custom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .navbar-custom .nav-link {
+    color: #333; /* Custom link color */
+ }
+ 
+ .navbar-custom .nav-link:hover {
+    color: #007bff; /* Custom link hover color */
+ }
+ .navbar-custom {
+    background-color: #f7f8f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-custom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+    font-size: 24px; /* Increase font size */
+    color: #333; /* Brand color */
+    /* Add logo if available */
+}
+
+.navbar-toggler-icon {
+    color: #333; /* Toggler icon color */
+}
+
+.nav-link {
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    text-decoration: underline; /* Underline effect on hover */
+}
