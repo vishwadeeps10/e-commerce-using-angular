@@ -11,9 +11,5 @@ import { Title } from '@angular/platform-browser';
     imports: [RouterOutlet, NavbarComponent,RouterLink]
 })
 export class AppComponent {
-  // constructor(private titleService: Title) {}
-  // ngOnInit() {
-  //   // Set the default title here
-  //   this.titleService.setTitle('E-Commerce');
-  // }
+
 }
