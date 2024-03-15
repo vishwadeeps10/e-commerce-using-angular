@@ -1,94 +1,33 @@
 <div class="container">
     <div class="row mt-4">
-
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
+        <app-loader *ngIf="isLoading" ></app-loader>
+        @for(product of products; track products.id ){
+            <div class="col-md-3">
+                <div class="card product-card">
+                    <img src={{product.image}} class="card-img-top image-size" alt="{{product?.title + ' image'}}"/>
+                    <div class="card-body">
+                        <div class="title-container">
+                            <h5 class="card-title">{{product?.title | truncateWords: 4}}</h5>
+                        </div>
+                        <p class="card-text">{{product?.description | truncateWords: 7}}</p>
+                        <div class="d-flex text-wrap">
+                            <p class="card-text">Price: <span class="fw-bold">{{product?.price | currency:'INR':'symbol':'1.2-2' }}</span></p>
+                            <p class="card-text flot-right rating">
+                                <span class="rating-text">Rating: </span>
+                                <span *ngIf="product?.rating?.rate >= 1" class="star-filled"><i class="bi bi-star-fill"></i></span>
+                                <span *ngIf="product?.rating?.rate >= 2" class="star-filled"><i class="bi bi-star-fill"></i></span>
+                                <span *ngIf="product?.rating?.rate >= 3" class="star-filled"><i class="bi bi-star-fill"></i></span>
+                                <span *ngIf="product?.rating?.rate >= 4" class="star-filled"><i class="bi bi-star-fill"></i></span>
+                                <span *ngIf="product?.rating?.rate >= 5" class="star-filled"><i class="bi bi-star-fill"></i></span>
+                            </p>
+                        </div>
+                        
+                        <a [routerLink]="['/products/' + product.id]" class="btn btn-primary">View Product</a>
+                    </div>
                 </div>
+                
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card product-card">
-                <img src="https://via.placeholder.com/300" class="card-img-top" alt="Product Image">
-                <div class="card-body">
-                    <h5 class="card-title">Product Name</h5>
-                    <p class="card-text">Description of the product. This could be a brief overview of the product.</p>
-                    <p class="card-text">$99.99</p>
-                    <a routerLink="" class="btn btn-primary">View Product</a>
-                </div>
-            </div>
-        </div>
+        }
 
     </div>
 </div>

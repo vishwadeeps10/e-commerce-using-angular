@@ -1,0 +1,52 @@
+<div class="container mt-5">
+  <app-loader *ngIf="isLoading; else elseBlock"></app-loader>
+  <ng-template #elseBlock>
+    <div class="row">
+      <div class="col-lg-6">
+        <img [src]="singleUserData?.image" class="img-fluid single-product-image-size" alt="Product Image">
+      </div>
+      <div class="col-lg-6">
+        <h2>{{singleUserData?.title}} </h2>
+        <div>
+          <div class="d-flex align-items-center mb-3 rating">
+            <div>
+              <span *ngIf="singleUserData?.rating?.rate >= 1" class="star-filled text-warning"><i
+                  class="bi bi-star-fill"></i></span>
+              <span *ngIf="singleUserData?.rating?.rate >= 2" class="star-filled text-warning"><i
+                  class="bi bi-star-fill"></i></span>
+              <span *ngIf="singleUserData?.rating?.rate >= 3" class="star-filled text-warning"><i
+                  class="bi bi-star-fill"></i></span>
+              <span *ngIf="singleUserData?.rating?.rate >= 4" class="star-filled text-warning"><i
+                  class="bi bi-star-fill"></i></span>
+              <span *ngIf="singleUserData?.rating?.rate >= 5" class="star-filled text-warning"><i
+                  class="bi bi-star-fill"></i></span>
+              <span *ngIf="singleUserData?.rating?.rate > 0 && singleUserData?.rating?.rate < 1"
+                class="star-filled text-warning"><i class="bi bi-star-half"></i></span>
+              <span class="ms-2"> Rating</span>
+            </div>
+          </div>
+          <div class="review">{{singleUserData?.rating?.count}} Reviews</div>
+          <p>
+            {{ singleUserData?.description | truncateWordsWithViewMore: 40:isTruncated }}
+            <a href="#" *ngIf="getWordCount(singleUserData?.description) > 40"
+              (click)="toggleDescription(); $event.preventDefault()">
+              {{ isTruncated ? 'View more' : 'View less' }}
+            </a>
+          </p>
+        </div>
+
+        <div class="size-box" *ngIf="singleUserData?.category === 'men\'s clothing'">
+          <button type="button" class="btn btn-size">S</button>
+          <button type="button" class="btn btn-size">M</button>
+          <button type="button" class="btn btn-size">L</button>
+          <button type="button" class="btn btn-size">XL</button>
+        </div>
+        <h3>Price: {{singleUserData?.price | currency:'INR':'symbol':'1.2-2'}}</h3>
+        <div class="button-container">
+          <button class="btn btn-primary add-to-cart-btn"><i class="bi bi-cart-plus-fill me-2"></i> Add to Cart</button>
+          <button class="btn btn-warning buy-now-btn"><i class="bi bi-basket-fill me-2"></i> Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>
