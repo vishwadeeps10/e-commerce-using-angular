@@ -1,0 +1,144 @@
+/* Title */
+.col-lg-6 {
+  width: 41%;
+}
+h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Star Rating */
+.bi-star-fill,
+.bi-star-half {
+  font-size: 24px;
+  color: #ffc107; 
+}
+
+/* Price */
+h3 {
+  color: #4caf50; /* Green color for price */
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Image */
+.img-fluid {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+.row {
+  margin-top: 50px;
+}
+
+.single-product-image-size {
+  height: 500px;
+  width: 390px;
+  padding: 35px;
+}
+.button-container {
+  display: flex;
+  gap: 25px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 0px !important;
+  padding: 12px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+
+  color: #fff;
+  transition: background-color 0.3s ease;
+  border: none;
+  border-radius: 0px !important;
+}
+
+.buy-now-btn:hover {
+  background-color: #c4a341;
+}
+.review{
+ margin-bottom: 20px;
+}
+.rating{
+  margin-bottom: 3px !important;
+}
+.size-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.btn-size {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+  margin: 15px; /* Remove any margin */
+  border:1px solid black ;
+  border-radius: 5px;
+}
+.btn-size:first-child {
+  margin-left: 0; 
+}
+
+.btn-size:focus,
+.btn-size:active {
+  background-color: #007bff;
+  color: white;
+  outline: none;
+}
+
+
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}

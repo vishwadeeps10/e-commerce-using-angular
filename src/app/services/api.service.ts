@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
+import { PRODUCT_LISTING } from '../constants/api-constant';
 
 @Injectable({
   providedIn: 'root' 
@@ -14,12 +15,14 @@ export class ApiService {
   // }
   // http = inject(HttpClient)
   constructor(private http: HttpClient) {}
-
   private GetErrors(error:any){
     return throwError(error.error)
   }
 
   getData(url: string):Observable<any> {
     return this.http.get(url).pipe(catchError(this.GetErrors )); 
+  }
+  getSigleData(query: string):Observable<any> {
+    return this.http.get(PRODUCT_LISTING+query).pipe(catchError(this.GetErrors )); 
   }
 }
