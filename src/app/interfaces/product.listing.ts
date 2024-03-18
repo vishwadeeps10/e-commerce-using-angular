@@ -1,14 +1,17 @@
-export interface ProductListing {
-    id:number
-    category:string
-    description:string
-    image:string
-    price: number
-    rating:Rating
-    title:string
-}
 
-export interface Rating{
+export interface IProduct {
+    id: number
+    title: string
+    price: number
+    description: string
+    category: string
+    image: string
+    quantity:number
+    rating: Rating
+  }
+  
+  export interface Rating {
+    rate: number
     count: number
-    rate:number
-}
+  }
+  
