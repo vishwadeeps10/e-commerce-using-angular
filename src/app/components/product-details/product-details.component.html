@@ -43,7 +43,7 @@
         </div>
         <h3>Price: {{singleUserData?.price | currency:'INR':'symbol':'1.2-2'}}</h3>
         <div class="button-container">
-          <button class="btn btn-primary add-to-cart-btn"><i class="bi bi-cart-plus-fill me-2"></i> Add to Cart</button>
+          <button class="btn btn-primary add-to-cart-btn"  (click)="addItemToCart(singleUserData)"><i class="bi bi-cart-plus-fill me-2"></i> Add to Cart</button>
           <button class="btn btn-warning buy-now-btn"><i class="bi bi-basket-fill me-2"></i> Buy Now</button>
         </div>
       </div>

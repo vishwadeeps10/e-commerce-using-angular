@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
       .subscribe(
         response => {
           if(response){
+            console.log("response",response)
             this.isLoading = false;
             this.products = response;
           }

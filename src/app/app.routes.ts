@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ErrorComponent } from './shared/error/error.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartComponent } from './components/cart/cart.component';
 
 export const routes: Routes = [
 
@@ -19,6 +20,7 @@ export const routes: Routes = [
 		component: ProductDetailsComponent,
 	},
     {path: 'about-us', component: AboutUsComponent},
+    {path: 'cart', component: CartComponent},
     {path: '**', component: ErrorComponent},
    
     

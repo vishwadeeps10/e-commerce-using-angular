@@ -44,3 +44,17 @@
     color: #007bff;
     text-decoration: underline; /* Underline effect on hover */
 }
+
+.cart-length-indicator {
+    display: inline-block;
+    width: 20px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    border-radius: 50%;
+    background-color: #007bff; /* Adjust background color as needed */
+    color: white;
+    text-align: center;
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 20px; /* Adjust line height to center text vertically */
+    margin-left: 5px; /* Adjust margin as needed */
+  }
+  
